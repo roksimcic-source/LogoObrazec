@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registracija - Spotify</title>
+    <link rel="stylesheet" href="CSS/registracija.css">
+    <link rel="shotcut icon" href="slike/spotify.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="glava">
+	<canvas width="60" height="60" id="myCanvas"></canvas>
+
+
+
+    <script>
+		const canvas = document.getElementById("myCanvas");
+		const ctx = canvas.getContext("2d");
+
+					ctx.strokeStyle="rgba(0,0,0,0)";
+					ctx.miterLimit=4;
+					ctx.scale(0.1, 0.1);
+					ctx.fillStyle="#1ed760";
+					ctx.beginPath();
+					ctx.moveTo(248,8);
+					ctx.bezierCurveTo(111,8,0,119,0,256);
+					ctx.bezierCurveTo(0,393,111,504,248,504);
+					ctx.bezierCurveTo(385,504,496,393,496,256);
+					ctx.bezierCurveTo(496,119,385,8,248,8);
+					ctx.closePath();
+					ctx.fill();
+					ctx.beginPath();
+					ctx.moveTo(406.6,231.1);
+					ctx.bezierCurveTo(401.4,231.1,398.2,229.8,393.7,227.2);
+					ctx.bezierCurveTo(322.5,184.7,195.2,174.5,112.8,197.5);
+					ctx.bezierCurveTo(109.2,198.5,104.7,200.1,99.9,200.1);
+					ctx.bezierCurveTo(86.7,200.1,76.6,189.8,76.6,176.5);
+					ctx.bezierCurveTo(76.6,162.9,85,155.2,94,152.6);
+					ctx.bezierCurveTo(129.2,142.3,168.6,137.4,211.5,137.4);
+					ctx.bezierCurveTo(284.5,137.4,361,152.6,416.9,185.2);
+					ctx.bezierCurveTo(424.7,189.7,429.8,195.9,429.8,207.8);
+					ctx.bezierCurveTo(429.8,221.4,418.8,231.1,406.6,231.1);
+					ctx.closePath();
+
+					ctx.moveTo(375.6,307.3);
+					ctx.bezierCurveTo(370.4,307.3,366.9,305,363.3,303.1);
+					ctx.bezierCurveTo(300.8,266.1,207.6,251.2,124.7,273.7);
+					ctx.bezierCurveTo(119.9,275,117.3,276.3,112.8,276.3);
+					ctx.bezierCurveTo(102.1,276.3,93.4,267.6,93.4,256.9);
+					ctx.bezierCurveTo(93.4,246.2,98.6,239.1,108.9,236.2);
+					ctx.bezierCurveTo(136.7,228.4,165.1,222.6,206.7,222.6);
+					ctx.bezierCurveTo(271.6,222.6,334.3,238.7,383.7,268.1);
+					ctx.bezierCurveTo(391.8,272.9,395,279.1,395,287.8);
+					ctx.bezierCurveTo(394.9,298.6,386.5,307.3,375.6,307.3);
+					ctx.closePath();
+
+					ctx.moveTo(348.7,372.9);
+					ctx.bezierCurveTo(344.5,372.9,341.9,371.6,338,369.3);
+					ctx.bezierCurveTo(275.6,331.7,203,330.1,131.3,344.8);
+					ctx.bezierCurveTo(127.4,345.8,122.3,347.4,119.4,347.4);
+					ctx.bezierCurveTo(109.7,347.4,103.6,339.7,103.6,331.6);
+					ctx.bezierCurveTo(103.6,321.3,109.7,316.4,117.2,314.8);
+					ctx.bezierCurveTo(199.1,296.7,282.8,298.3,354.2,341);
+					ctx.bezierCurveTo(360.3,344.9,363.9,348.4,363.9,357.5);
+					ctx.bezierCurveTo(363.9,366.6,356.8,372.9,348.7,372.9);
+					ctx.closePath();
+
+					ctx.fillStyle = "#000";
+					ctx.fill();
+		</script>
+
+
+	
+	
+</header>
+
+<div class="glavni">
+    <div class="zacetniDiv">
+        <a href="index.html" class="gumb1">
+            <img src="slike/backArrow.png" width="24" height="24" alt="Nazaj">
+        </a>
+        <div class="prviText">
+            <div class="ustvariG">Registracija</div>
+        </div>
+    </div>
+
+    <form id="noviceForm">
+        <div class="drugiDiv">
+            <!-- IME -->
+            <div class="imetext"><span>Ime</span></div>
+            <input type="text" id="ime" placeholder="Vnesi ime">
+            <div class="AlertIme">Vnesi svoje ime.</div>
+
+            <!-- PRIIMEK -->
+            <div class="imetext"><span>Priimek</span></div>
+            <input type="text" id="priimek" placeholder="Vnesi priimek">
+            <div class="AlertPriimek">Vnesi svoj priimek.</div>
+
+            <!-- UPORABNIŠKO IME -->
+            <div class="imetext"><span>Uporabniško ime</span></div>
+            <input type="text" id="uporabnisko" placeholder="Vnesi uporabniško ime">
+            <div class="AlertUser">Vnesi uporabniško ime.</div>
+
+            <!-- EMAIL -->
+            <div class="imetext"><span>E-pošta</span></div>
+            <input type="email" id="email" placeholder="Vnesi email">
+            <div class="AlertEmail">Vnesi veljaven email.</div>
+
+            <!-- GESLO -->
+            <div class="imetext"><span>Geslo</span></div>
+            <input type="password" id="geslo" placeholder="Vnesi geslo">
+            <div class="AlertGeslo">Vnesi geslo.</div>
+
+            <!-- POTRDI GESLO -->
+            <div class="imetext"><span>Potrdi geslo</span></div>
+            <input type="password" id="geslo2" placeholder="Ponovi geslo">
+            <div class="AlertGeslo2">Gesli se ne ujemata.</div>
+
+            <!-- DATUM ROJSTVA -->
+            <div class="DatumRojstva"><span>Datum rojstva</span></div>
+            <div class="datum">
+                <input type="text" id="dan" placeholder="dd" maxlength="2">
+                <select id="mesec">
+                    <option value="" disabled selected hidden>Mesec</option>
+                    <option value="januar">Januar</option>
+                    <option value="februar">Februar</option>
+                    <option value="marec">Marec</option>
+                    <option value="april">April</option>
+                    <option value="maj">Maj</option>
+                    <option value="junij">Junij</option>
+                    <option value="julij">Julij</option>
+                    <option value="avgust">Avgust</option>
+                    <option value="september">September</option>
+                    <option value="oktober">Oktober</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+                <input type="text" id="leto" placeholder="yyyy" maxlength="4">
+            </div>
+            <div class="alert">Vnesi datum rojstva.</div>
+
+            <!-- SPOL -->
+            <div class="SpolDiv">
+                <div class="spol"><span>Spol</span></div>
+                <div class="textPodSpol"><span>Izberi svoj spol.</span></div>
+                <div id="glavniradiodiv">
+                    <label class="radio-container">Moški <input type="radio" name="gender" value="male"></label>
+                    <label class="radio-container">Ženska <input type="radio" name="gender" value="female"></label>
+                </div>
+                <div class="RadioAlert">Izberi spol.</div>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="gumbNaprej">
+                <button type="submit" class="gumb" id="nextButton">
+                    <h3 class="naprejbarva">Registriraj se</h3>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/datum.js"></script>
+<script src="js/registracija.js"></script>
+</body>
+</html>
+

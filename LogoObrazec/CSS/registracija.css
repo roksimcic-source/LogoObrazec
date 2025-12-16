@@ -1,0 +1,182 @@
+@import url('fonts.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    background-color: #121212;
+    font-family: mixUIRegular;
+}
+
+html,body{ height: 100%; }
+
+/* HEADER */
+.glava{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0 24px;
+}
+
+.glava_svg{ height: 40px; width: 40px; fill: white; }
+
+/* MAIN */
+.glavni{
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BACK + TITLE */
+.zacetniDiv{
+    height:80px;
+    width: 100%;
+    display:flex;
+    align-items:center;
+}
+
+.gumb1{
+    width: 56px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.gumb1 img{
+    filter: invert(70%);
+    transition: 0.2s;
+}
+.gumb1:hover img{ filter: invert(100%); }
+
+.prviText{
+    display:flex;
+    align-items:center;
+}
+
+.ustvariG{ font-family: mixUIBold; font-size: 24px; }
+
+/* FORM CONTAINER */
+.drugiDiv{ width: 324px; margin-top:18px; }
+
+.imetext{ font-size:14px; font-family:mixUIBold; margin-bottom:6px; }
+
+/* INPUTS */
+input[type="text"], input[type="email"], input[type="password"], select{
+    all:unset;
+    width:100%;
+    background:#121212;
+    border:1px solid #818181;
+    color:white;
+    font-size:16px;
+    padding:12px;
+    border-radius:4px;
+    transition:0.2s;
+}
+input:hover, select:hover{ border-color:white; }
+.invalid{ border-color:#F3727F !important; }
+
+/* ALERTS */
+.alert,
+.AlertIme,
+.AlertPriimek,
+.AlertUser,
+.AlertEmail,
+.AlertGeslo,
+.AlertGeslo2,
+.RadioAlert{
+    color:#F3727F;
+    font-size:14px;
+    margin-top:4px;
+    display:none;
+}
+
+/* DATE */
+.datum{ display:flex; gap:8px; }
+#dan{ width:40px; }
+#mesec{ width:120px; padding-right:40px; appearance:none; }
+.Svg{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    pointer-events:none;
+}
+#leto{ width:70px; }
+
+/* GENDER */
+.SpolDiv{ margin-top:18px; }
+.radio-container{
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+    gap:10px;
+}
+.radio-container input{
+    appearance:none;
+    width:18px;
+    height:18px;
+    border:1px solid #818181;
+    border-radius:50%;
+    cursor:pointer;
+}
+.radio-container input:checked{ border:5px solid #1ed760; }
+#glavniradiodiv{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 25px;
+}
+
+/* SUBMIT BUTTON */
+.gumb{
+    width:100%;
+    height:48px;
+    background:#1ed760;
+    border:none;
+    border-radius:40px;
+    font-size:16px;
+    margin-top:40px;
+    cursor:pointer;
+    transition:0.2s;
+}
+.gumb:hover{ background:#3be477; }
+
+/* POPUP */
+.popup{
+    display:none;
+    position:fixed;
+    top:50%; left:50%; transform:translate(-50%, -50%);
+    width:300px;
+    padding:20px;
+    background:#121212;
+    border-radius:8px;
+    border:1px solid #1ed760;
+    text-align:center;
+    z-index:1000;
+}
+#overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    z-index:999;
+}
+
+.gumb_popup{
+    width:100px;
+    height:32px;
+    background:#1ed760;
+    border:none;
+    border-radius:40px;
+    margin-top:15px;
+    cursor:pointer;
+    transition:0.2s;
+}
+.gumb_popup:hover{ background:#3be477; }
